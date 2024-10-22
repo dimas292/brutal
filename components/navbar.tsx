@@ -15,7 +15,7 @@ import {
 import { cn } from '@/lib/utils'
 
 export default function NavigationMenuDemo() {
-    const [active, setActive] = React.useState('blog')
+    const [active, setActive] = React.useState('home')
   return (
     <NavigationMenu className="z-[5] max-w-[800px] w-full mx-2">
       <NavigationMenuList className="flex">
