@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*, html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --radius: 0.5rem
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+#carousel {
+  width: 100%;            /* Pastikan gambar melebar penuh */
+  max-height: 200px;      /* Tinggi maksimal 300px */
+  object-fit: cover;      /* Potong gambar agar memenuhi kontainer */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.carousel-container {
+  max-width: 800px;       /* Batas lebar carousel */
+  margin: 0 auto;         /* Pusatkan carousel secara horizontal */
+  position: relative;
 }
+
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-navigation.prev {
+  left: 10px;
+}
+
+.carousel-navigation.next {
+  right: 10px;
+}
+
