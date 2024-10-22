@@ -17,7 +17,7 @@ import { cn } from '@/lib/utils'
 export default function NavigationMenuDemo() {
     const [active, setActive] = React.useState('blog')
   return (
-    <NavigationMenu className="z-[5] max-w-[800px] w-full">
+    <NavigationMenu className="z-[5] max-w-[800px] w-full mx-2">
       <NavigationMenuList className="flex">
         <NavigationMenuItem >
           <Link href="/" legacyBehavior passHref>
